@@ -3,7 +3,7 @@
 #download data and unpack --> becomes airlines.csv
 
 wget https://dax-cdn.cdn.appdomain.cloud/dax-airline/1.0.1/airline.tar.gz
-tar -xzf airlines.tar.gz
+tar -xzf airline.tar.gz
 
 cat airline.csv | cut -d, -f3,5,7,17,30,32,48,55,62 | awk -F, '{ if ($7 == "AA") {print $0} }' > American.csv
 cat airline.csv | cut -d, -f3,5,7,17,30,32,48,55,62 | awk -F, '{ if ($7 == "DL") {print $0} }' > Delta.csv
@@ -19,8 +19,8 @@ cat airline.csv | cut -d, -f3,5,7,17,30,32,48,55,62 | awk -F, '{ if ($7 == "UA")
 
 #remove big data file but keep split up files
 
-rm airlines.tar.gz
-rm airlines.csv
+rm airline.tar.gz
+rm airline.csv
 
 #ls the smaller file names into input_file_list
 #ls <file names> > input_file_list
