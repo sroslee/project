@@ -15,7 +15,7 @@ cat airline.csv | cut -d, -f3,5,7,17,30,32,48,55,62 | awk -F, '{ if ($3 == "UA")
 # keep 3 (month), 5 (dayofweek), 17 (state of origin), 30 (crsdeptime), 32 (departure delay), 48 (cancelled), 55 (distance), 62 (1st departure time),  
 #split data by desired areas into many smaller files
 
-
+#edit
 
 
 #remove big data file but keep split up files
