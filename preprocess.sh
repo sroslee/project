@@ -11,6 +11,7 @@ cat airline.csv | cut -d, -f3,5,7,17,30,32,48,55,62 | awk -F, '{ if ($3 == "DL")
 cat airline.csv | cut -d, -f3,5,7,17,30,32,48,55,62 | awk -F, '{ if ($3 == "F9") {print $0} }' > Frontier.csv
 cat airline.csv | cut -d, -f3,5,7,17,30,32,48,55,62 | awk -F, '{ if ($3 == "WN") {print $0} }' > Southwest.csv
 cat airline.csv | cut -d, -f3,5,7,17,30,32,48,55,62 | awk -F, '{ if ($3 == "UA") {print $0} }' > United.csv
+cat airline.csv | cut -d, -f3,5,7,17,30,32,48,55,62 | awk -F, '{ if ($3 == "PS") {print $0} }' > test.csv
 # split by column 7 AA DL F9 WN UA
 # keep 3 (month), 5 (dayofweek), 17 (state of origin), 30 (crsdeptime), 32 (departure delay), 48 (cancelled), 55 (distance), 62 (1st departure time),  
 #split data by desired areas into many smaller files
