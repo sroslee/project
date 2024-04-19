@@ -21,7 +21,7 @@ predictor3 = data$actual_elapsed_time
 predictor4 = data$dep_delay
 predictor5 = data$month
 
-model = glm(response ~ predictor1 + predictor2 + predictor3 + predictor4 + as.factor(predictor5) + predictor1:predictor4 + predictor4:as.factor(predictor5))
+model = glm(response ~ predictor1 + predictor3 + predictor4 + as.factor(predictor5) + predictor1:predictor4 + predictor4:as.factor(predictor5))
 print(summary(model))
 
 predictions <- predict(model, newdata = new_data, type = "response")
