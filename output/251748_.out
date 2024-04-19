@@ -1,0 +1,29 @@
+AA.csv exists
+
+Call:
+glm(formula = response ~ predictor1 + predictor3 + predictor4 + 
+    predictor1:predictor4)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-1466.08     -4.91      0.38      5.12    310.39  
+
+Coefficients:
+                        Estimate Std. Error  t value Pr(>|t|)    
+(Intercept)           -2.288e+01  1.113e-02 -2056.12   <2e-16 ***
+predictor1            -7.082e-02  2.812e-05 -2517.91   <2e-16 ***
+predictor3             5.966e-01  2.299e-04  2594.46   <2e-16 ***
+predictor4             1.025e+00  3.386e-04  3027.90   <2e-16 ***
+predictor1:predictor4 -2.533e-05  3.295e-07   -76.89   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for gaussian family taken to be 88.01104)
+
+    Null deviance: 3854920832  on 5834842  degrees of freedom
+Residual deviance:  513530149  on 5834838  degrees of freedom
+  (79796 observations deleted due to missingness)
+AIC: 42683863
+
+Number of Fisher Scoring iterations: 2
+

@@ -1,0 +1,51 @@
+AA.csv exists
+
+Call:
+glm(formula = response ~ predictor1 + predictor3 + predictor4 + 
+    as.factor(predictor5) + predictor1:predictor4 + predictor4:as.factor(predictor5))
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-1476.62     -4.97      0.31      5.09    309.99  
+
+Coefficients:
+                                     Estimate Std. Error   t value Pr(>|t|)    
+(Intercept)                        -2.394e+01  1.777e-02 -1347.141   <2e-16 ***
+predictor1                         -7.107e-02  2.807e-05 -2531.907   <2e-16 ***
+predictor3                          5.986e-01  2.295e-04  2608.611   <2e-16 ***
+predictor4                          1.007e+00  6.396e-04  1573.961   <2e-16 ***
+as.factor(predictor5)2              2.481e-01  2.062e-02    12.029   <2e-16 ***
+as.factor(predictor5)3              2.820e-01  2.007e-02    14.054   <2e-16 ***
+as.factor(predictor5)4              1.181e+00  1.998e-02    59.101   <2e-16 ***
+as.factor(predictor5)5              1.144e+00  1.982e-02    57.730   <2e-16 ***
+as.factor(predictor5)6              1.637e+00  2.001e-02    81.791   <2e-16 ***
+as.factor(predictor5)7              1.892e+00  1.987e-02    95.229   <2e-16 ***
+as.factor(predictor5)8              2.020e+00  2.012e-02   100.411   <2e-16 ***
+as.factor(predictor5)9              1.577e+00  2.055e-02    76.770   <2e-16 ***
+as.factor(predictor5)10             1.463e+00  1.934e-02    75.650   <2e-16 ***
+as.factor(predictor5)11             1.752e-01  1.969e-02     8.897   <2e-16 ***
+as.factor(predictor5)12             1.789e-01  1.968e-02     9.086   <2e-16 ***
+predictor1:predictor4              -2.511e-05  3.286e-07   -76.435   <2e-16 ***
+predictor4:as.factor(predictor5)2   1.227e-02  8.555e-04    14.348   <2e-16 ***
+predictor4:as.factor(predictor5)3   3.136e-02  8.349e-04    37.559   <2e-16 ***
+predictor4:as.factor(predictor5)4   3.934e-02  9.320e-04    42.211   <2e-16 ***
+predictor4:as.factor(predictor5)5   1.431e-02  9.650e-04    14.831   <2e-16 ***
+predictor4:as.factor(predictor5)6   2.569e-02  8.355e-04    30.743   <2e-16 ***
+predictor4:as.factor(predictor5)7   1.280e-02  8.913e-04    14.364   <2e-16 ***
+predictor4:as.factor(predictor5)8   1.200e-02  9.120e-04    13.159   <2e-16 ***
+predictor4:as.factor(predictor5)9   2.242e-02  1.056e-03    21.237   <2e-16 ***
+predictor4:as.factor(predictor5)10  3.912e-02  8.943e-04    43.746   <2e-16 ***
+predictor4:as.factor(predictor5)11  2.003e-02  9.082e-04    22.053   <2e-16 ***
+predictor4:as.factor(predictor5)12  1.854e-02  7.583e-04    24.447   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for gaussian family taken to be 87.40769)
+
+    Null deviance: 3854920832  on 5834842  degrees of freedom
+Residual deviance:  510007761  on 5834816  degrees of freedom
+  (79796 observations deleted due to missingness)
+AIC: 42643747
+
+Number of Fisher Scoring iterations: 2
+
