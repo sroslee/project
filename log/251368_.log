@@ -1,0 +1,32 @@
+000 (251368.000.000) 2024-04-18 16:08:03 Job submitted from host: <128.104.100.148:9618?addrs=128.104.100.148-9618+[2607-f388-107c-501-216-3eff-feb2-bc11]-9618&alias=learn.chtc.wisc.edu&noUDP&sock=schedd_1351356_64bc>
+...
+040 (251368.000.000) 2024-04-18 16:10:07 Started transferring input files
+	Transferring to host: <128.105.69.169:9618?addrs=128.105.69.169-9618+[2607-f388-2200-100-1270-fdff-fe56-710c]-9618&alias=e2552.chtc.wisc.edu&noUDP&sock=slot1_115_1107513_d946_61049>
+...
+040 (251368.000.000) 2024-04-18 16:11:11 Finished transferring input files
+...
+001 (251368.000.000) 2024-04-18 16:11:12 Job executing on host: <128.105.69.169:9618?addrs=128.105.69.169-9618+[2607-f388-2200-100-1270-fdff-fe56-710c]-9618&alias=e2552.chtc.wisc.edu&noUDP&sock=startd_12561_6133>
+	SlotName: slot1_115@e2552.chtc.wisc.edu
+	CondorScratchDir = "/var/lib/condor/execute/slot1/dir_2625331"
+	Cpus = 1
+	Disk = 3305351
+	GPUs = 0
+	IoHeavy = 0
+	Memory = 2048
+...
+006 (251368.000.000) 2024-04-18 16:11:21 Image size of job updated: 2097152
+	2048  -  MemoryUsage of job (MB)
+	2097004  -  ResidentSetSize of job (KB)
+...
+007 (251368.000.000) 2024-04-18 16:11:25 Shadow exception!
+	Error from slot1_115@e2552.chtc.wisc.edu: disk usage exceeded request_disk
+	0  -  Run Bytes Sent By Job
+	1046  -  Run Bytes Received By Job
+...
+012 (251368.000.000) 2024-04-18 16:11:25 Job was held.
+	Error from slot1_115@e2552.chtc.wisc.edu: disk usage exceeded request_disk
+	Code 21 Subcode 103
+...
+009 (251368.000.000) 2024-04-18 16:14:58 Job was aborted.
+	via condor_rm (by user sadesai3)
+...
