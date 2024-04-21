@@ -27,5 +27,31 @@ print(summary(model))
 #predictions <- predict(model, newdata = new_data, type = "response")
 #write.csv(predictions, file = "predicted.csv")
 
-correlation_matrix <- cor(data[, c("dep_delay", "actual_elapsed_time", "flights", "distance")])
-print(correlation_matrix)
+
+
+
+#attempting to split into train and test (lm): -->
+
+train_size = floor(0.8 * nrow(data))  #80/20 split
+train_indices = sample(seq_len(nrow(data)), size = train_size, replace = FALSE)
+
+train_data = data[train_indices, ]
+test_data = data[-train_indices, ]
+
+print("test_data is")
+print(nrow(test_data))
+
+linear_model = lm(arr_delay ~ actual_elapsed_time + as.factor(month) + distance + dep_delay, data = train_data)
+print(summary(linear_model))
+
+
+predictions = predict(linear_model, newdata = test_data)
+
+rmse = sqrt(mean((test_data$arr_delay - predictions)^2))
+print(rmse)
+
+comparison_df = data.frame(
+  actual_delay = test_data$arr_delay,
+  predicted_delay = predictions
+)
+print(head(comparison_df))
