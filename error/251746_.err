@@ -1,4 +1,0 @@
-Error in predict.lm(object, newdata, se.fit, scale = 1, type = if (type ==  : 
-  object 'new_data' not found
-Calls: predict -> predict.glm -> predict.lm
-Execution halted

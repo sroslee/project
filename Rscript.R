@@ -19,10 +19,13 @@ predictor1 = data$distance
 #predictor2 = data$flights
 predictor3 = data$actual_elapsed_time
 predictor4 = data$dep_delay
-predictor5 = data$month
+#predictor5 = data$month
 
-model = glm(response ~ predictor1 + predictor3 + predictor4 + as.factor(predictor5) + predictor1:predictor4 + predictor4:as.factor(predictor5))
+model = glm(response ~ predictor1 + predictor3 + predictor4 + predictor1:predictor4)
 print(summary(model))
 
-predictions <- predict(model, newdata = new_data, type = "response")
-write.csv(predictions, file = "predicted.csv")
+#predictions <- predict(model, newdata = new_data, type = "response")
+#write.csv(predictions, file = "predicted.csv")
+
+correlation_matrix <- cor(data[, c("dep_delay", "actual_elapsed_time", "flights", "distance")])
+print(correlation_matrix)
