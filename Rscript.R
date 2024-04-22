@@ -13,6 +13,7 @@ if(length(args) == 1){
 
 data = read.csv(dataframe)
 
+#do we need to make a column of day of the week (1 through 7) for a predictor?
 
 response = data$arr_delay
 predictor1 = data$distance
@@ -26,6 +27,8 @@ print(summary(model))
 
 #predictions <- predict(model, newdata = new_data, type = "response")
 #write.csv(predictions, file = "predicted.csv")
+
+
 
 
 
@@ -46,12 +49,13 @@ print(summary(linear_model))
 
 
 predictions = predict(linear_model, newdata = test_data)
+rounded_predictions = round(predictions, 1)  #round to 1 decimal place
 
-rmse = sqrt(mean((test_data$arr_delay - predictions)^2))
-print(rmse)
+comparison_df = cbind(test_data, predicted_delay = rounded_predictions)
+file_name = paste0(dataframe, "_predicted.csv")
+write.csv(comparison_df, file = file_name, row.names = FALSE)
 
-comparison_df = data.frame(
-  actual_delay = test_data$arr_delay,
-  predicted_delay = predictions
-)
-print(head(comparison_df))
+print(paste("Predicted results have been written to: ", file_name))
+
+print("top 10 rows of the predicted delays")
+print(head(comparison_df, 10))
