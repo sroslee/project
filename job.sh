@@ -8,4 +8,4 @@ export RHOME=$PWD/R
 export R_LIBS=$PWD/packages
 
 
-Rscript Rscript.R $1
+Rscript R2.R $1
