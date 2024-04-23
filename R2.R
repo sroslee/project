@@ -24,7 +24,7 @@ stepwise_model = step(lm(arr_delay ~ actual_elapsed_time + as.factor(month) + di
 print(summary(stepwise_model))
 
 
-predictions = predict(linear_model, newdata = test_data)
+predictions = predict(stepwise_model, newdata = test_data)
 rounded_predictions = round(predictions, 1)  #round to 1 decimal place
 
 comparison_df = cbind(test_data, predicted_delay = rounded_predictions)
