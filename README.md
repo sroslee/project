@@ -1,4 +1,4 @@
-Directions on how to clone:
+To clone: git clone git@github.com:sroslee/project.git
 
 The large original csv was split in the /home/groups/STAT_DSCP/group10 directory into 11 files. These were referenced from here in our submission script.
 
