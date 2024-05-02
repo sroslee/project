@@ -7,6 +7,7 @@ To run computation on (CHTC): condor_submit job.sub
 - The model summary outputs will be in the output folder (11 will be generated)
 
 Graphs:
+
 histplot.R
 - Use plots.sh by switching plots.R to histplot.R
 - Use plots.sub by switching the argument to the airline csv you want a graph for 
