@@ -1,0 +1,78 @@
+---
+title: "Project Report"
+author: "Aurora Tourant, Lexi Siegel, Nuha Roslee, Simran Desai, Sophia Rynes"
+output: html_document
+---
+<p>&nbsp;</p>
+
+<p style="text-indent: 30px;">
+This data, obtained from the IBM website, contains information about 200 million flights on various airlines that span the years of 1987-2020. The objective is to accurately predict the delay upon arrival (minutes) for a given flight by utilizing step regression on a linear model. The analysis focused on discerning patterns and predictors that impact delay times, aiming to enhance predictive accuracy and operational efficiency. After running parallel computations, the linear model demonstrated high accuracy of delay predictions to show the different circumstances causing the delays for various airlines.
+</p>
+
+<p style="text-indent: 30px;">
+The 16.3GB flight data was split by reporting airlines, creating 11 files. During the exploration phase, discrepancies were found between some column names and their corresponding data values. This misalignment was corrected by cross referencing a sample of the row data with the dataset preview provided on the website.
+</p>
+
+<p style="text-indent: 30px;">
+Stepwise regression was employed on a linear regression model in both directions. Each of the 11 subsets of data was divided into an 80/20 train/test split. The model was trained on the training data and then utilized to predict delays for the test data. The stepwise regression will iteratively run through combinations of our selected variables to find the best set of predictors. These 11 computations were executed in parallel, each airline dataset passed through the model, with each job requiring ~7 minutes to complete, a memory allocation of 8GB and disk requirement of 2GB.
+</p>
+
+<p style="text-indent: 30px;">
+In each of the 11 airline analyses, distance, elapsed time, and departure delay were “significant” predictors based on the model summary output. There was variation for certain months among the different airlines. The model was a good fit for most airlines, indicated with relatively high R2 values ranging from high 80s-90s for 10 airlines. Delta had shown a low R2 value (.49) indicating the model wasn't a good fit. Plots were created to emphasize the difference in delay statistics among the airlines.
+</p>
+<p>&nbsp;</p>
+
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="AA.png" style="width: 45%;">
+  <img src="UA.png" style="width: 45%;">
+</div>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="SW.png" style="width: 45%;">
+  <img src="DE.png" style="width: 45%;">
+</div>
+
+<p>&nbsp;</p>
+<p style="text-indent: 30px;">
+For the 4 focal airlines, most arrivals are within 10 minutes of expected arrival time, the predicted delays limit the number of extreme outliers so using these graphs allows for a better representation of flight delays. These show that delays over an hour occur less than 5% of the time for each airline, but some like American and United have higher likelihoods. 
+</p>
+<p>&nbsp;</p>
+
+<div style="text-align: center;">
+  <img src="plot.png" width="700" height="600"/>
+</div>
+<p>&nbsp;</p>
+
+<p style="text-indent: 30px;">
+The accuracy of the model was demonstrated by plotting actual arrival delay against predicted. The closer the points are to the line (slope 1), the higher the accuracy. The respective R2 values are stated, measuring the proportion of variation in arrival delays explained by the predictor variables.
+</p>
+<p>&nbsp;</p>
+
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="avg delay per month.png" style="width: 45%;">
+  <img src="actual and predicted.png" style="width: 53%;">
+</div>
+<p>&nbsp;</p>
+
+<p style="text-indent: 30px;">
+These plots depict average flight delay by month, by airline. Delta has the highest average delays, Southwest has the lowest. Winter and summer months have higher wait times for all airlines compared to spring and fall. The right-hand plots show average delay by month, comparing actual and predicted for each airline. These graphs show similar trends and that the predicted data is very similar to the actual data. 
+</p>
+
+<p style="text-indent: 30px;">
+Some constraints encountered was that the original dataset was 86GB but only part of the data was able to unpack due to disk limitations on CHTC, restricting the analysis to flights from 1987-1995 (originally 1987-2020). Consequently, the findings may not fully represent the dynamics of modern flights. This dataset contained many rows with missing values, leading to rows excluded from the model. It was also likely that too few variables were used as predictors in stepwise regression, which limited the exploration of potential model configurations, reducing the ability to identify optimal sets of predictors.
+</p>
+
+<p style="text-indent: 30px;">
+Upon revisiting the question of how accurately can a flight's arrival delay be predicted for various airlines, plots created and summary outputs indicated the accuracy of the delay predictions for each airline in the dataset. It was observed that flights in the summer months and winter months tend to have longer delays than in the spring and fall months. Overall, the models used accurately highlight differences between delays for the majority of airlines considered.
+</p>
+
+<p style="text-indent: 30px;">
+For future work, one could examine the departure delays column to predict how much of a departure delay there is across different airlines in the dataset. One could compare this to the arrival delay predictions and check for similarities. Other ideas include utilizing logistic regression to categorize significant or non-significant delays and expanding the set of predictors used in stepwise regression to get a better understanding of the patterns observed within Delta’s delay predictions.
+</p>
+<p>&nbsp;</p>
+
+<div style="text-align: center;">
+  <img src="contribution.png" width="800" height="300"/>
+</div>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
